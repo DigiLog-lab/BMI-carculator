@@ -15,8 +15,10 @@ def carculate():
     #体重
     weight = request.form['weight']
     #BMIを計算
-    bmi = float(weight) / (float(height) ** 2)
-    return render_template('result.html', bmi=bmi)
+    result = float(weight) / (float(height) ** 2)
+    return render_template('result.html', result=result)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    
