@@ -11,7 +11,8 @@ def home():
 @app.route('/carculate', methods=['POST'])
 def carculate():
     #身長
-    height = request.form['height'] 
+    height = request.form['height']
+    height = float(height) / 100 
     #体重
     weight = request.form['weight']
     #BMIを計算
@@ -21,4 +22,3 @@ def carculate():
 if __name__ == '__main__':
     app.run(debug=True)
 
-    
